@@ -1,4 +1,4 @@
-name: CI
+name: Run Unit Tests
 
 on:
   push:
@@ -14,16 +14,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Clonar repositorio
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Instalar Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
 
-      - name: Instalar dependencias
+      - name: Install dependencies
         run: npm install
 
-      - name: Ejecutar pruebas
+      - name: Run tests
         run: npm test

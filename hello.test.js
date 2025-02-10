@@ -1,7 +1,7 @@
-const hellowold = requiere("./hello");
+const holaMundo = require('./hola');
 
-TextDecoderStream("Debe retornar'Hola Mundo'", () => {
-    expect(helloworld()).toBe("Hola Mundo");
+test('Debe devolver "¡Hola, Mundo!"', () => {
+    expect(holaMundo()).toBe("¡Hola, Mundo!");
 });
 
 //Yafreisi Perez 2020-9871
